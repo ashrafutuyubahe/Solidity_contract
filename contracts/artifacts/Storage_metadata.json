@@ -7,15 +7,28 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "sayHelloWorld",
+				"name": "retrieve",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -23,7 +36,20 @@
 			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
 			"details": "Store & retrieve value in a variable",
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"retrieve()": {
+					"details": "Return value ",
+					"returns": {
+						"_0": "value of 'number'"
+					}
+				},
+				"store(uint256)": {
+					"details": "Store value in variable",
+					"params": {
+						"num": "value to store"
+					}
+				}
+			},
 			"title": "Storage",
 			"version": 1
 		},
@@ -50,11 +76,11 @@
 	},
 	"sources": {
 		"contracts/1_Storage.sol": {
-			"keccak256": "0x0d00a2aa7e18c8e39481879758be863ba62624d2623d21f42e0039c269d20bed",
+			"keccak256": "0x4fe19faf9c86166cc111bd429a6d173af77a3e4eeafe8aea28600d157c48bf60",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8581326467aac140d77a58a07f1a93fcdd952ebbc14de6e06c82036d7892f2cb",
-				"dweb:/ipfs/QmQdxXyiSBw9NJ67oLQHM9PiTCEARgtP3TQ1SxjRjvGJVC"
+				"bzz-raw://7939d5e38b5c46507b038a65b150b8f2d46e967b91c3c7baef074b861ee1410c",
+				"dweb:/ipfs/QmWzAxEjzZLUqAaaViLXyFwquFHDgqGUAsdoDbv8WmHQp9"
 			]
 		}
 	},
